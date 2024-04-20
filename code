@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Types of Switches</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .switch {
+            position: relative;
+            width: 80px;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .switch .slider {
+            position: absolute;
+            cursor: pointer;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: red;
+            transition: 0.4s;
+        }
+        .switch .slider:before {
+            position: absolute;
+            content:"";
+            height: 30px;
+            width: 30px;
+            left: 5px;
+            bottom: 5px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+        input:checked + .slider {
+            background-color: green;
+        }
+        input:checked + .slider:before {
+            transform: translateX(35px);
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            width: 100%;
+        }
+        H2{
+            COLOR: WHITE;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiple Types of Switches</h1>
+   <h2>BULB</h2>
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+    </label>
+   <BR>
+    <h2>FAN</h2>
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+    </label>
+    <br>
+    <h2>SOCKET</h2>
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+    </label>
+
+</body>
+</html>
